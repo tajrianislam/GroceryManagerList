@@ -1,0 +1,55 @@
+
+# OPT
+  -b option:
+      No.					 
+      Yes.					 
+  -f option:
+      No.					
+      Yes.					 [property firstOccurence]
+  -l option:
+      No.		
+      Yes.					 [property lastOccurence]
+  -i option:
+      No.					
+      Yes.				
+
+# File
+  Size:
+      Empty.				[single] [property emptyFile]
+      Not empty.
+
+# StringFrom
+  Length of the StringFrom:
+      Empty.				[single] 
+      One.				[single]
+      More than one.                             
+      Longer than the file.		[single]
+  Number of occurrences of the StringFrom in the file:
+      None.				[single] [if !emptyFile] 
+      One.					 [if !emptyFile && !firstOccurence && !lastOccurence]
+      Many.					 [if !emptyFile]
+
+# StringTo
+  Length of the StringTo:
+      Empty.				[single] 
+      One.				[single]
+      More than one.                             
+      Longer than the file.		[single]
+  Number of occurrences of the StringTo in the file:
+      None.				[single] [if !emptyFile] 
+      One.					 [if !emptyFile && !firstOccurence && !lastOccurence] 
+      Many.					 [if !emptyFile]
+
+
+# Filename
+  Presence of a file corresponding to the name:
+      Not present.                      [error]
+      Present.
+
+# FilenameArg
+  Number of filename in command line arguments:
+      None.				[error]
+      One.				
+      More.
+
+     
